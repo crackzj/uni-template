@@ -1,0 +1,6 @@
+/*
+* websocket
+* 
+*/
+
+export default ws
