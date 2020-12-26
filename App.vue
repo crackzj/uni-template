@@ -1,6 +1,10 @@
 <script>
+	import http from './utils/http.js';
 	export default {
 		onLaunch: function() {
+			http({},"https://baidu.com/").then(res=>{
+				// console.log(res);
+			})
 			uni.login({
 				provider:"weixin",
 				success(res) {
