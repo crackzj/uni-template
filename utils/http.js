@@ -6,7 +6,7 @@ const debug = true;
  * @function request请求封装
  * @param {string} url:请求地址
  * @param {object} param:请求参数，param里‘method’和‘header’属性名只能用来设置请求方法和请求头
- * @param {object} option:配置信息 {method:'GET|POST',heaser:'xxx|localstorage',debug:true|false}  
+ * @param {object} option:配置信息 {method:'GET|POST',header:'xxx|localstorage',debug:true|false}  
  */
 const http =function(param={},url="/",option={}) {
 		return new Promise((resolve,reject)=>{
@@ -53,8 +53,8 @@ function consoleInfo(url,param,option){
 		if(option.debug === undefined || option.debug){
 			log.info('','===========rquest log===========');
 			log.info("url:",url);
-			log.info("method:",param?.method || option?.method || "GET");
-			log.info("header:",param?.header || option?.header || "")
+			log.info("method:",param.method || option.method || "GET");
+			log.info("header:",param.header || option.header || "")
 			log.info("params:",param);
 		}				
 	}
