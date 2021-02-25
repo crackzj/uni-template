@@ -1,6 +1,12 @@
 {
 	"pages": [
 		{
+				"path":"pages/login/login",
+				"style":{
+					"navigationBarTitleText":"登陆页"
+				}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "卜夋"
@@ -12,5 +18,28 @@
 		"navigationBarTitleText": "卜夋",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"selectedColor": "#1296db",
+		"list":[
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home_selected.png",
+				"text": "目录"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/article.png",
+				"selectedIconPath": "static/tabbar/article_selected.png",
+				"text": "目录"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/mark.png",
+				"selectedIconPath": "static/tabbar/mark_selected.png",
+				"text": "目录"
+			}
+		]
 	}
 }

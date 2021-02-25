@@ -6,3 +6,7 @@ node_modules
 dist
 
 unpackage
+
+.Ds_Store
+
+.hbuilderx
