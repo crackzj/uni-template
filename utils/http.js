@@ -1,7 +1,8 @@
 import {log} from './util.js';
+import env from '../env/env.js';
 //开启全局调试信息 
-const debug = true;
-
+const debug = env.mode==='dev' ? true : false;
+const preUrl = env.url;
 /**
  * @function request请求封装
  * @param {string} url:请求地址
@@ -15,10 +16,11 @@ const http =function(param={},url="/",option={}) {
 			uni.showLoading({
 				title:option.loading || '加载中...'
 			});
+			const fulUrl = preUrl + url;
 			uni.request({
-				method:param.method || option.method || "GET",
-				header:param.header || option.header  || "",
-				url: param.url || url, 
+				method: option.method || "GET",
+				header: option.header  || "",
+				url: fulUrl, 
 				data:param,
 				success(res) {
 					resolve(res.data);

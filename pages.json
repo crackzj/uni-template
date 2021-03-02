@@ -1,4 +1,7 @@
 {
+	"easycom": {
+			"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
 	"pages": [
 		{
 				"path":"pages/login/login",
@@ -11,6 +14,18 @@
 			"style": {
 				"navigationBarTitleText": "卜夋"
 			}
+		},
+		{
+			"path":"pages/article/article",
+			"style":{
+				"navigationBarTitleText":"随笔"
+			}
+		},
+		{
+			"path":"pages/mark/mark",
+			"style":{
+				"navigationBarTitleText":"马克"
+			}
 		}
 	],
 	"globalStyle": {
@@ -21,24 +36,25 @@
 	},
 	"tabBar":{
 		"selectedColor": "#1296db",
+		"iconWidth":"20px",
 		"list":[
 			{
 				"pagePath": "pages/index/index",
 				"iconPath": "static/tabbar/home.png",
 				"selectedIconPath": "static/tabbar/home_selected.png",
-				"text": "目录"
+				"text": "分类"
 			},
 			{
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/article/article",
 				"iconPath": "static/tabbar/article.png",
 				"selectedIconPath": "static/tabbar/article_selected.png",
-				"text": "目录"
+				"text": "随笔"
 			},
 			{
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/mark/mark",
 				"iconPath": "static/tabbar/mark.png",
 				"selectedIconPath": "static/tabbar/mark_selected.png",
-				"text": "目录"
+				"text": "马克"
 			}
 		]
 	}

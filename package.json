@@ -1,0 +1,23 @@
+{
+  "name": "uni-template",
+  "version": "1.0.0",
+  "description": "<h2 align=\"center\">uni-app 项目自定义模板</h2>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crackzj/uni-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crackzj/uni-template/issues"
+  },
+  "homepage": "https://github.com/crackzj/uni-template#readme",
+  "dependencies": {
+    "uview-ui": "^1.8.3"
+  }
+}

@@ -1,8 +1,7 @@
 <script>
-	import http from './utils/http.js';
 	export default {
 		onLaunch: function() {
-			http({},"https://baidu.com/").then(res=>{
+			this.$api().then(res=>{
 				// console.log(res);
 			})
 			uni.login({
@@ -19,6 +18,6 @@
 	}
 </script>
 
-<style>
-	/*每个页面公共css */
+<style lang="scss">
+	@import "uview-ui/index.scss";
 </style>

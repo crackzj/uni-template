@@ -1,8 +1,16 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="page">
+		<u-tabs :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
+		<view class="posts" v-for="item in 5">
+			<view class="title">
+				我是标题我是标题
+			</view>
+			<view class="content">
+				我是内容我是内容
+			</view>
+			<view class="like">
+				点赞 评论
+			</view>
 		</view>
 	</view>
 </template>
@@ -11,42 +19,57 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				list: [
+						{
+							name: '前端'
+						}, 
+						{
+							name: 'vue',
+						}, 
+						{
+							name: 'golang',
+						},
+						{
+							name: 'mysql'
+						},
+						{
+							name:'redis'
+						}
+				],
+				current: 0
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			change(index) {
+				this.current = index;
+			}
 		}
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+<style lang="scss">
+	.page{
+		.posts{
+			margin: 0 10rpx 16rpx;
+			background-color: #fff;
+			border-radius: 6rpx;
+			box-shadow: 0 0 12rpx #f2f3f5;
+			.title{
+				margin: 0rpx 10rpx 10rpx;
+				padding-top: 20rpx;
+				font-size: 34rpx;
+				font-weight: 500;
+			}
+			.content{
+				margin: 8rpx 10rpx;
+			}
+			.like{
+				margin: 10rpx;
+				padding-bottom: 10rpx;
+			}
+		}
 	}
 </style>
