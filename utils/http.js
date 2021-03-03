@@ -9,7 +9,7 @@ const preUrl = env.url;
  * @param {object} param:请求参数，param里‘method’和‘header’属性名只能用来设置请求方法和请求头
  * @param {object} option:配置信息 {method:'GET|POST',header:'xxx|localstorage',debug:true|false}  
  */
-const http =function(param={},url="/",option={}) {
+const http =function(url="/",param={},option={}) {
 		return new Promise((resolve,reject)=>{
 			//正式环境可注释或删除该调试信息
 			consoleInfo(url,param,option);

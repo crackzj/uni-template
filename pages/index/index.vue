@@ -1,7 +1,7 @@
 <template>
 	<view class="page">
 		<u-tabs :list="list" :is-scroll="false" :current="current" @change="change"></u-tabs>
-		<view class="posts" v-for="item in 5">
+		<view class="posts" v-for="item in 7">
 			<view class="title">
 				我是标题我是标题
 			</view>
@@ -53,7 +53,7 @@
 <style lang="scss">
 	.page{
 		.posts{
-			margin: 0 10rpx 16rpx;
+			margin: 0 10rpx 18rpx;
 			background-color: #fff;
 			border-radius: 6rpx;
 			box-shadow: 0 0 12rpx #f2f3f5;
