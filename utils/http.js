@@ -25,7 +25,7 @@ const http =function(url="/",param={},option={}) {
 				success(res) {
 					resolve(res.data);
 					uni.hideLoading();
-					if(debug && (option.debug?option.debug : true)){
+					if(debug || option.debug){
 						log.success(res.data);
 					}
 				},
@@ -42,7 +42,7 @@ const http =function(url="/",param={},option={}) {
 							}
 						}
 					})
-					if(debug && (option.debug?option.debug : true)){
+					if(debug || option.debug){
 						log.err(err);
 					}
 				}
